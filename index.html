@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Page </title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">Venia</div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Smart Gear</a></li>
+                <li><a href="#">Accessories</a></li>
+            </ul>
+        </nav>
+        <input type="text" id="search-input" class="header__search" placeholder="Search products...">
+        <div class="menu-icon" onclick="toggleMenu()">
+            ☰
+        </div>
+    </header>
+    <div class="container">
+        <aside class="filter-section">
+            <h2>Filters</h2>
+            <form>
+                <div class="filter-category">
+                    <input type="checkbox" id="jewelery"  class="category" name="category" value="jewelery" onclick="updateSelectedCategories(this)" />
+                    <label for="jewelry">Jewelry</label>
+                </div>
+                <div class="filter-category">
+                    <input type="checkbox" id="electronics" class="category" name="category" value="electronics" onclick="updateSelectedCategories(this)" />
+                    <label for="electronics">Electronics</label>
+                </div>
+                <div class="filter-category">
+                    <input type="checkbox" id="women-clothing" class="category" name="category" value="women's clothing" onclick="updateSelectedCategories(this)" />
+                    <label for="women-clothing">Women's Clothing</label>
+                </div>
+                <div class="filter-category">
+                    <input type="checkbox" id="men-clothing" class="category" name="category" value="men's clothing" onclick="updateSelectedCategories(this)" />
+                    <label for="men-clothing">Men's Clothing</label>
+                </div>
+            </form>
+        </aside>
+        <main class="content">
+            <h1>Welcome to Venia</h1>
+            <p>Your one-stop shop for all things awesome.</p>
+            <div class="product-container" id="product-container">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+            <div id="loading" class="loading"></div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2023 Product Store</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
